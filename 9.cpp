@@ -13,6 +13,8 @@ using namespace std;
 
 void Nuarray(int &h);
 
+void readarr(int b[],int k);
+
 //--------------------------
 //micro
 //---------------------
@@ -26,12 +28,22 @@ int n;
 //Get number of array
 Nuarray(n);
 
+
+
 //Seperator
 
 cout<<endl<<endl<<"------------------------"<<endl<<endl;
 
+//Declar array
+int a[n];
 
-getch();
+//Get array number
+readarr(a,n);
+
+
+//Seperator
+
+cout<<endl<<endl<<"------------------------"<<endl<<endl;ch();
 }
 
 
@@ -61,3 +73,13 @@ cin>>h;
 }
 
 //--------------------------------------------------
+
+void readarr(int b[],int k)
+{
+    for(int i =0; i<k; ++i)
+    {
+        cout<<i<<" = ";
+        cin>>b[i];
+        cout<<endl;
+    }
+}
