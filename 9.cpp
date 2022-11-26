@@ -17,6 +17,8 @@ void readarr(int b[],int k);
 
 int max(int c[],int l);
 
+int findindex(int d[],int u,int max);
+
 //--------------------------
 //micro
 //---------------------
@@ -48,8 +50,18 @@ cout<<endl<<endl<<"------------------------"<<endl<<endl;
 
 //find max
 
-cout<<"max of array = "<<max(a,n);
+int maxarr =0;
 
+maxarr = max(a,n);
+cout<<"max of array = "<<maxarr;
+
+//Seperator
+
+cout<<endl<<endl<<"------------------------"<<endl<<endl;
+
+//find max
+
+cout<<"index of array = "<<findindex(a,n,maxarr);
 
 //----------------------------------------------
 getch();
@@ -108,4 +120,17 @@ for(int j=1; j<l; ++j)
 
 return max;
 
+}
+
+
+//-------------------------
+
+//find index of array
+int findindex(int d[],int u,int max)
+{
+    for(int t=0; t<u; ++t)
+    {
+        if (max == d[t])
+        return t;
+    }
 }
