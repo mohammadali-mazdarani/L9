@@ -10,6 +10,13 @@ using namespace std;
 *
 */
 //prototype
+
+int Nuarray();
+
+int findmax(int a[] , int x);
+
+void outfind(int b[], int y, int max);
+
 //--------------------------
 //micro
 //---------------------
@@ -18,18 +25,8 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
-//Declar number of array
-int n;
-
-//Loop for get array
-while (n > 10)
-{
-   
-cout<<"Enter number of array (Maximum number of array 10) =";
-cin>>n;
-
-}
-
+//Get number of array
+int n = Nuarray();
 
 //Seperator
 
@@ -51,17 +48,12 @@ break;
 }
 
 
-//Declar Maximum number
-int max = a[0];
+
+
+
 //Find maximum of number
+int max = findmax(a,n);
 
-for (int j = 1; j < n; j++)
-{
-
-if (max < a[j])
-max = a[j];
-
-}
 
 //Seperator
 
@@ -69,22 +61,76 @@ cout<<endl<<endl<<"------------------------"<<endl<<endl;
 
 
 //out put
-cout<<"Maximum of array = ";
-for(int k = 0; k<n; k++)
-{
-    if (max == a[k])
-    cout<<"a["<<k<<"] = "<<a[k];
-}
 
-
-
-
-
+outfind(a, n, max);
 
 
 
 getch();
 }
+
+
+
 //function variable
+
 //--------------------------
 //functions
+
+
+//Get Number of array
+
+int Nuarray()
+{
+
+//Declar number of array
+int n;
+
+//Loop for get array
+while (n > 10)
+{
+   
+cout<<"Enter number of array (Maximum number of array 10) =";
+cin>>n;
+
+}
+
+return n;
+
+}
+
+//--------------------------------------------------
+
+//Get Array
+
+
+
+//--------------------------------------------------
+//find max
+int findmax(int a[] , int x)
+{
+
+int max = a[0];
+for (int j = 1; j < x; j++)
+{
+
+if (max < a[j])
+max = a[j];
+
+}
+
+return max;
+}
+
+//------------------------------------------------------
+//Show max
+void outfind(int b[], int y, int max)
+{
+
+    cout<<"Maximum of array = ";
+for(int k = 0; k<y; k++)
+{
+    if (max == b[k])
+    cout<<"a["<<k<<"] = "<<b[k];
+}
+
+}
