@@ -25,12 +25,12 @@ int max(int c[],int l);
 int main(int argc, char** argv)
 {
 
+//Declare number of array
+
 int n;
 
 //Get number of array
 Nuarray(n);
-
-
 
 //Seperator
 
@@ -42,15 +42,16 @@ int a[n];
 //Get array number
 readarr(a,n);
 
-
 //Seperator
 
 cout<<endl<<endl<<"------------------------"<<endl<<endl;
 
-
 //find max
 
-cout<<max(a,n);
+cout<<"max of array = "<<max(a,n);
+
+
+//----------------------------------------------
 getch();
 }
 
