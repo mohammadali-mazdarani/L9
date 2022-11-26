@@ -11,11 +11,13 @@ using namespace std;
 */
 //prototype
 
-int Nuarray();
+void Nuarray();
 
-int findmax(int a[] , int x);
+//void readarray(int c[],int &m);
 
-void outfind(int b[], int y, int max);
+//int findmax(int a[] , int x);
+
+//void outfind(int b[], int y, int max);
 
 //--------------------------
 //micro
@@ -26,30 +28,17 @@ int main(int argc, char** argv)
 {
 
 //Get number of array
-int n = Nuarray();
+Nuarray();
 
 //Seperator
 
 cout<<endl<<endl<<"------------------------"<<endl<<endl;
-
-
-//Declar array
+/*
 int a[n];
 
-//Get array number
+//Get array
 
-for (int i = 0; i < n; i++)
-{
-   cout<<"a["<<i<<"] = ";
-   cin>>a[i];
-   if(a[i] == 0)
-break;
-   cout<<endl;
-}
-
-
-
-
+readarray(a , n);
 
 //Find maximum of number
 int max = findmax(a,n);
@@ -64,7 +53,7 @@ cout<<endl<<endl<<"------------------------"<<endl<<endl;
 
 outfind(a, n, max);
 
-
+*/
 
 getch();
 }
@@ -79,7 +68,7 @@ getch();
 
 //Get Number of array
 
-int Nuarray()
+void Nuarray()
 {
 
 //Declar number of array
@@ -94,12 +83,30 @@ cin>>n;
 
 }
 
-return n;
+
 
 }
 
 //--------------------------------------------------
+/*
 
+//Read array
+
+void readarray(int c[],int &m)
+{
+    
+
+//Get array number
+
+for (int i = 0; i < m; i++)
+{
+   cout<<"a["<<i<<"] = ";
+   cin>>c[i];
+   if(c[i] == 0)
+break;
+   cout<<endl;
+}
+}
 //Get Array
 
 
@@ -134,3 +141,4 @@ for(int k = 0; k<y; k++)
 }
 
 }
+*/
