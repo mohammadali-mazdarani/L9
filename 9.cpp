@@ -99,12 +99,24 @@ cin>>h;
 
 void readarr(int b[],int k)
 {
-    for(int i =0; i<k; ++i)
+    int i = 0;
+    do
     {
         cout<<i<<" = ";
         cin>>b[i];
+      
+        if(b[i] == 0)
+        {
+            for(int j=i+1; j<k; ++j)
+            {
+                b[j] = 0;
+            }
+            break;
+        }
+        
+          i++;
         cout<<endl;
-    }
+    }while(i<k);
 }
 
 int max(int c[],int l)
