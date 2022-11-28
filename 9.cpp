@@ -27,7 +27,7 @@ int findindex(int d[],int u,int max);
 int main(int argc, char** argv)
 {
 
-//Declare number of array
+//Declare number of array1
 
 int n;
 
