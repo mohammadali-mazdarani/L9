@@ -23,7 +23,7 @@ int findindex(int d[],int u,int max);
 //micro
 //---------------------
 //global variable
-//-------------------
+//--------------------
 int main(int argc, char** argv)
 {
 
